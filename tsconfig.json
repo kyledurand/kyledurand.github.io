@@ -1,0 +1,16 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "plugins": [
+      {
+        "name": "typescript-lit-html-plugin",
+        "tags": [
+          "html",
+          "template"
+        ]
+      }
+    ]
+  }
+}
