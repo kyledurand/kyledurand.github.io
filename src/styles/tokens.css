@@ -1,0 +1,29 @@
+:root {
+  /* Space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  /* Radius */
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 10px;
+  --radius-6: 12px;
+  /* Size */
+  --size-1: 13px;
+  --size-2: 14px;
+  --size-3: 15px;
+  --size-4: 16px;
+  /* Time */
+  --time-1: 100ms;
+  --time-2: 150ms;
+  --time-3: 200ms;
+  /* Ease */
+  --ease-in-1: cubic-bezier(0.6, 0.3, 1, 1);
+  --ease-in-2: cubic-bezier(0.5, 0, 0.75, 1);
+}

@@ -1,0 +1,40 @@
+.button {
+  --button-size: 44px;
+  border: 0;
+  font-size: var(--size-2);
+  background-color: var(--background-button);
+  border-radius: var(--radius-3);
+  transition: color, background-color, 100ms ease-in-out;
+  min-height: var(--button-size);
+  min-width: var(--button-size);
+
+  &:hover {
+    background-color: deeppink;
+  }
+
+  &:active {
+    background-color: red;
+  }
+
+  &:focus {
+    background-color: purple;
+  }
+}
+
+.button-group {
+  display: flex;
+
+  > * {
+    margin: 0;
+  }
+}
+
+.button-group button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

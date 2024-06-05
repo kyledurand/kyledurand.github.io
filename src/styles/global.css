@@ -1,0 +1,59 @@
+@import "./theme.css";
+@import "./tokens.css";
+@import "./button.css";
+
+:root {
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
+    "Courier New", Courier, monospace;
+
+  --selection-text: white;
+  --selection-background: orange;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: var(--font-body);
+  font-size: 100%;
+  transition: color var(--time-1) var(--ease-in-2),
+    background-color var(--time-1) var(--ease-in-2);
+}
+
+a {
+  color: var(--link);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: var(--selection-text);
+  background-color: var(--selection-background);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
