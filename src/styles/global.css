@@ -25,7 +25,7 @@ body {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   color: var(--text);
   background-color: var(--background);
   font-family: var(--font-body);
