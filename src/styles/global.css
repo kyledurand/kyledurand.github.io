@@ -12,6 +12,7 @@
 
   --selection-text: white;
   --selection-background: orange;
+  --logo-width: calc(50px + var(--space-2) * 2);
 }
 
 html,
@@ -20,6 +21,7 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {

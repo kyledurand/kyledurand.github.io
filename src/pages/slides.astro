@@ -1,0 +1,45 @@
+<div class="slides">
+  <section><a href="#2" id="1" class="perspective"># 1</a></section>
+  <section><a href="#3" id="2" class="perspective"># 2</a></section>
+  <section><a href="#4" id="3" class="perspective"># 3</a></section>
+
+  <section><a href="#5" id="4" class="perspective"># 4</a></section>
+  <section><a href="#6" id="5" class="perspective"># 5</a></section>
+  <section><a href="#7" id="6" class="perspective"># 6</a></section>
+
+  <section><a href="#8" id="7" class="perspective"># 7</a></section>
+  <section><a href="#9" id="8" class="perspective"># 8</a></section>
+  <section><a href="#1" id="9" class="perspective"># 9</a></section>
+</div>
+
+<style>
+  .perspective {
+    transform: translateZ(12px);
+  }
+
+  .slides {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
+    perspective: 30px;
+    scroll-snap-type: both mandatory;
+    position: relative;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    --scale: 3;
+    position: relative;
+    display: grid;
+    place-content: center;
+    width: calc(100vw - var(--logo-width));
+    height: 100vh;
+    scroll-snap-align: start;
+    transform-style: preserve-3d;
+  }
+</style>

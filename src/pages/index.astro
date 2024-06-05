@@ -1,15 +1,8 @@
 ---
 import Frame from "../components/Frame.astro";
-import { Parachute } from "../components/Parachute.ts";
+import Slides from "./slides.astro";
 ---
 
 <Frame>
-  <Parachute client:visible />
-  <h1>👋 Hey I'm Kyle</h1>
-  <p>
-    I like writing and teaching code
-    <a href="https://twitter.com/Shopify">@shopify</a>
-    and I'm currently working on the
-    <a href="https://polaris.shopify.com">Polaris design system</a>.
-  </p>
+  <Slides />
 </Frame>

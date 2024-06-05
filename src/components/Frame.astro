@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Nav from "./Nav.astro";
+import { Parachute } from "./Parachute";
 ---
 
 <html lang="en">
@@ -11,31 +13,30 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/play">Play</a></li>
-        <li><a href="/travels">Travels</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/art">An art</a></li>
-        <li><a href="/slides">Some slides</a></li>
-      </ul>
-    </nav>
+    <div class="nav">
+      <Nav />
+      <Parachute client:visible />
+    </div>
+
     <main>
       <slot />
     </main>
 
     <style>
       body {
-        display: flex;
-        gap: var(--space-4);
+        display: grid;
+        grid-template-columns: var(--logo-width) calc(100% - var(--logo-width));
       }
 
       main {
-        max-width: 60ch;
-        margin: 0 auto;
+        display: flex;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .nav {
+        border-inline-end: 1px solid var(--highlight);
       }
 
       nav {

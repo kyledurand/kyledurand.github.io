@@ -1,11 +1,13 @@
 :root {
   color-scheme: light;
   --text: #000;
+  --text-inverted: #fff;
   --link: #010;
 
   --highlight: #007265;
 
   --background: #c5fff6;
+  --background-spot: #dffffa;
   --background-button: #5fbf79;
   --background-stroke: rgb(95 191 121 / 0.25);
 }
@@ -15,6 +17,7 @@
   :root {
     color-scheme: dark;
     --text: #c0c0c0;
+    --text-inverted: #000;
     --link: #f1f;
 
     --highlight: #f2c2ff;

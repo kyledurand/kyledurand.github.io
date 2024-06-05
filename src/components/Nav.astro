@@ -1,0 +1,43 @@
+<nav>
+  <ul>
+    <li><a href="/">🏠</a></li>
+    <li><a href="/about">🙋</a></li>
+    <li><a href="/work">💻</a></li>
+    <li><a href="/travels">🛩️</a></li>
+    <li><a href="/contact">📇</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    padding-block: var(--space-2);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: var(--space-2);
+  }
+
+  a {
+    padding: var(--space-2);
+    text-align: center;
+    font-size: var(--size-5);
+    filter: saturate(0);
+    border-radius: var(--radius-2);
+
+    &:hover {
+      filter: saturate(1);
+      background-color: var(--highlight);
+    }
+  }
+</style>
