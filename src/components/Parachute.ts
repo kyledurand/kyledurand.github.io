@@ -5,7 +5,7 @@ import { customElement, state } from "lit/decorators.js";
 export class Parachute extends LitElement {
   private duration = 700;
 
-  @state() private position = "-100vh";
+  @state() private position = "-130dvh";
   @state() private status: "falling" | "landed" = "falling";
 
   constructor() {
@@ -13,7 +13,7 @@ export class Parachute extends LitElement {
     setTimeout(() => {
       this.position = "-50vh";
       this.deploy();
-    }, this.duration);
+    }, 0);
   }
 
   deploy() {
@@ -32,8 +32,8 @@ export class Parachute extends LitElement {
   static override styles = css`
     .logo {
       position: absolute;
-      bottom: var(--space-2);
-      left: var(--space-2);
+      bottom: var(--space-3);
+      left: var(--space-3);
       overflow: visible;
     }
 
@@ -58,8 +58,8 @@ export class Parachute extends LitElement {
   override render() {
     return html`
       <svg
-        width="50"
-        height="50"
+        width="40"
+        height="40"
         viewBox="0 0 50 50"
         xmlns="http://www.w3.org/2000/svg"
         class="logo ${this.status}"
@@ -89,7 +89,7 @@ export class Parachute extends LitElement {
               dur="${this.duration / 1.5}ms"
               fill="freeze"
               easing="ease-in"
-              begin="${this.duration * 1.75}ms"
+              begin="${this.duration}ms"
             />
           </path>
 
@@ -97,17 +97,17 @@ export class Parachute extends LitElement {
             <animate 
               attributeName="opacity"
               values="0;1" 
-              dur="${this.duration * 1}ms" 
+              dur="${this.duration}ms" 
               fill="freeze" 
-              begin="${this.duration * 2}ms"
+              begin="${this.duration}ms"
             />
             <animate 
               attributeName="d"
               from="M20.0125 46H29.9875"
               to="M4.05237 46H45.9476" 
-              dur="${this.duration * 1}ms" 
+              dur="${this.duration}ms" 
               fill="freeze" 
-              begin="${this.duration * 2}ms"
+              begin="${this.duration}ms"
             />
         </g>
       </svg>

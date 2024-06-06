@@ -25,7 +25,36 @@
   }
 
   li {
+    --animation-delay: 150ms;
     padding: var(--space-2);
+    opacity: 0;
+  }
+
+  /* iterate over list items and fade in with more delay on each one */
+  li:nth-child(1) {
+    animation: fadeIn 0.5s var(--animation-delay) forwards;
+  }
+
+  li:nth-child(2) {
+    animation: fadeIn 0.5s calc(var(--animation-delay) * 2) forwards;
+  }
+
+  li:nth-child(3) {
+    animation: fadeIn 0.5s calc(var(--animation-delay) * 3) forwards;
+  }
+
+  li:nth-child(4) {
+    animation: fadeIn 0.5s calc(var(--animation-delay) * 4) forwards;
+  }
+
+  li:nth-child(5) {
+    animation: fadeIn 0.5s calc(var(--animation-delay) * 5) forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 
   a {
