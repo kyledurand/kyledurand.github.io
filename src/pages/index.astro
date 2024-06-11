@@ -1,8 +1,59 @@
 ---
-import Frame from "../components/Frame.astro";
-import Slides from "./slides.astro";
+import Page from "../components/Layout/Page.astro";
 ---
 
-<Frame>
-  <Slides />
-</Frame>
+<Page title="Design, develop, derand">
+  <div class="slides">
+    <section id="intro">
+      <h1>
+        <span role="img" aria-label="Waving hand">👋</span> Hey, I'm Kyle
+      </h1>
+      <p>
+        I'm a designer and developer. I work at
+        <a href="https://twitter.com/Shopify">@shopify</a>
+        and I'm currently working on the
+        <a href="https://polaris.shopify.com">Polaris design system</a>.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>A little about me</h2>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+    </section>
+
+    <section id="travels"><h2>Travels</h2></section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+  </div>
+</Page>
+
+<style>
+  .slides {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100dvh;
+    overflow: auto;
+    perspective: 30px;
+    position: relative;
+    scroll-snap-type: both mandatory;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--highlight) transparent;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    position: relative;
+    scroll-snap-align: start;
+    transform-style: preserve-3d;
+    height: 100dvh;
+    max-width: 75ch;
+    padding: var(--space-4);
+  }
+</style>

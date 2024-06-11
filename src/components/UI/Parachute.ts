@@ -2,7 +2,7 @@ import { LitElement, css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 
 @customElement("ui-parachute")
-export class Parachute extends LitElement {
+export class UIParachute extends LitElement {
   private duration = 700;
 
   @state() private position = "-130dvh";
@@ -30,10 +30,16 @@ export class Parachute extends LitElement {
   }
 
   static override styles = css`
-    .logo {
+    .wrapper {
       position: absolute;
-      bottom: var(--space-3);
-      left: var(--space-3);
+      bottom: 0;
+      left: 0;
+      padding: var(--space-3);
+      background: var(--background);
+      box-shadow: -5px -5px 7px 0px var(--background);
+    }
+
+    .logo {
       overflow: visible;
     }
 
@@ -57,6 +63,7 @@ export class Parachute extends LitElement {
 
   override render() {
     return html`
+    <div class="wrapper">
       <svg
         width="40"
         height="40"
@@ -111,6 +118,7 @@ export class Parachute extends LitElement {
             />
         </g>
       </svg>
+    </div>
     `;
   }
 }

@@ -1,15 +1,13 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
+    "target": "ES5",
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "plugins": [
       {
         "name": "typescript-lit-html-plugin",
-        "tags": [
-          "html",
-          "template"
-        ]
+        "tags": ["html", "template"]
       }
     ]
   }

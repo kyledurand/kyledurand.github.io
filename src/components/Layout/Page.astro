@@ -1,21 +1,30 @@
 ---
-import "../styles/global.css";
+import "../../styles/global.css";
 import Nav from "./Nav.astro";
-import { Parachute } from "./Parachute";
+import {UIParachute} from "../UI/Parachute";
+
+interface Props {
+  title: string;
+}
+
+const {title} = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Kyle Durand" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.png" />
     <meta name="color-scheme" content="dark" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
   </head>
 
   <body>
     <div class="nav">
       <Nav />
-      <Parachute client:visible />
+      <UIParachute client:visible />
     </div>
 
     <main>
