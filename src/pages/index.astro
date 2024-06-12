@@ -1,101 +1,106 @@
 ---
+import {Image} from "astro:assets";
+import kyle from "../images/kyle.jpeg";
 import Page from "../components/Layout/Page.astro";
+import {UIStack} from "../components/UI/Stack";
 ---
 
 <Page title="Design, develop, derand.">
   <div class="slides">
     <section id="intro">
-      <h1>
-        <span role="img" aria-label="Waving hand">👋</span> Hey, I'm Kyle
-      </h1>
-      <p>
-        I'm a designer / developer. I work
-        <a href="https://twitter.com/Shopify">@shopify</a>
-        and I'm currently part of the
-        <a href="https://polaris.shopify.com">Polaris design system</a> team.
-      </p>
+      <UIStack client:load align="center" gap={2} paddingBlock={7}>
+        <Image
+          src={kyle}
+          alt="A picture of Kyle in Essaouira with what appears to be a funny hat but is actually a part of the set of Game of Thrones."
+          width="100"
+          height="100"
+          class="avatar"
+        />
+        <h1>
+          <span role="img" aria-label="Waving hand">👋</span> Hey, I'm Kyle
+        </h1>
+      </UIStack>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
+      <UIStack client:visible direction="column" gap={4}>
+        <p>
+          I'm a designer / developer. I work
+          <a href="https://x.com/Shopify">@shopify</a>
+          and I'm currently part of the
+          <a href="https://polaris.shopify.com">Polaris design system</a> team.
+        </p>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita
-        voluptatum eveniet explicabo, quasi in deleniti quisquam minus nisi
-        saepe voluptas, dicta nihil obcaecati laboriosam impedit quod odit eos.
-        Ipsam.
-      </p>
+        <p>
+          I enjoy being close to design, care about performance, accessibility,
+          and tweaking the details.
+        </p>
+
+        <p>
+          In my spare time I enjoy being outdoors, camping, running, biking,
+          walking the dog and traveling.
+        </p>
+      </UIStack>
     </section>
 
     <section id="about">
       <h2>A little about me</h2>
+
+      <ul>
+        <li>
+          <strong>Design</strong> - I enjoy designing interfaces, working on design
+          systems, and creating delightful experiences.
+        </li>
+        <li>
+          <strong>Development</strong> - I enjoy building things, learning new technologies,
+          and making things work.
+        </li>
+        <li>
+          <strong>Travel</strong> - I enjoy traveling, exploring new places, and
+          experiencing new cultures.
+        </li>
+        <li>
+          <strong>Outdoors</strong> - I enjoy being outdoors, camping, running, biking,
+          walking the dog, and being in nature.
+        </li>
+      </ul>
     </section>
 
     <section id="work">
       <h2>Work</h2>
+
+      <h3>Shopify</h3>
+      <ul>
+        <li>Theme support – 2014</li>
+        <li>Plus theme support – 2014</li>
+        <li>Front end developer, Admin team – 2015</li>
+        <li>
+          Full stack developer / designer working on
+          <a
+            href="https://betakit.com/shopify-launches-sello-to-democratize-ecommerce-through-social-media/"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            Sello
+          </a>
+          – 2015
+        </li>
+        <li>Full stack developer working on experimental apps – 2016</li>
+        <li>
+          Front end developer on the web foundations team (Rails -> React) –
+          2017
+        </li>
+        <li>Front end developer on logistics – 2018</li>
+        <li>
+          Front end developer on the Polaris design system – 2019 - present
+        </li>
+      </ul>
     </section>
 
     <section id="travels"><h2>Travels</h2></section>
 
     <section id="contact">
       <h2>Contact</h2>
+
+      linkedin
     </section>
   </div>
 </Page>
@@ -122,10 +127,16 @@ import Page from "../components/Layout/Page.astro";
     transform-style: preserve-3d;
     height: 100%;
     min-height: 100dvh;
-    overflow: auto;
+    width: 100%;
     max-width: 75ch;
+    overflow: auto;
+    margin: 0 auto;
     padding-inline: var(--space-4);
     scrollbar-width: none;
     scroll-behavior: smooth;
+  }
+
+  .avatar {
+    border-radius: var(--radius-6);
   }
 </style>
