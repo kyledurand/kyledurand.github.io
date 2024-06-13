@@ -9,9 +9,6 @@
     "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
     "Courier New", Courier, monospace;
-
-  --selection-text: white;
-  --selection-background: orange;
   --logo-width: calc(50px + var(--space-2) * 2);
 }
 

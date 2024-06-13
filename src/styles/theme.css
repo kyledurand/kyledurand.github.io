@@ -10,8 +10,10 @@
   --background-spot: #dffffa;
   --background-button: #5fbf79;
   --background-stroke: rgb(95 191 121 / 0.25);
-}
 
+  --selection-text: white;
+  --selection-background: #2e4053;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,5 +26,8 @@
 
     --background: #312f2f;
     --background-stroke: rgb(181 130 195 / 0.2);
+
+    --selection-text: var(--background);
+    --selection-background: var(--highlight);
   }
 }

@@ -1,0 +1,21 @@
+---
+const {year, location, description} = Astro.props;
+---
+
+<li>
+  <h3>{location} • {year}</h3>
+  <p>{description}</p>
+</li>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+</style>

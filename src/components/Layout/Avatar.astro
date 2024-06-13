@@ -1,0 +1,13 @@
+---
+import {Image} from "astro:assets";
+
+const {src, alt, size} = Astro.props;
+---
+
+<Image src={src} alt={alt} width={size} height={size} />
+
+<style>
+  img {
+    border-radius: var(--radius-6);
+  }
+</style>
