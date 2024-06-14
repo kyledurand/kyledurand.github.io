@@ -15,13 +15,14 @@
     "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^4.9.2",
     "lit": "^3.1.4",
-    "postcss-pxtorem": "^6.1.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
+    "@types/postcss-pxtorem": "^6.0.3",
     "cssnano": "^7.0.2",
-    "postcss": "^8.4.38"
+    "postcss": "^8.4.38",
+    "postcss-pxtorem": "^6.1.0"
   },
   "prettier": {
     "bracketSpacing": false

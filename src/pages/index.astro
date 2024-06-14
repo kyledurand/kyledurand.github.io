@@ -1,16 +1,19 @@
 ---
-import {Image} from "astro:assets";
 import kyle from "../images/kyle.jpeg";
 import Page from "../components/Layout/Page.astro";
 import {UIStack} from "../components/UI/Stack";
-import ListItem from "../components/Layout/ListItem.astro";
-import travels from "../content/travel.yml";
+import ListItem, {
+  type ListItemProps,
+} from "../components/Layout/ListItem.astro";
+// @ts-ignore-next-line
+import travels from "../content/travel/travel.yml";
 import Avatar from "../components/Layout/Avatar.astro";
 ---
 
 <Page title="Design, develop, derand.">
   <div class="slides">
     <section id="intro">
+      <!-- @ts-ignore -->
       <UIStack client:load align="center" gap={2} paddingBlock={7}>
         <Avatar
           src={kyle}
@@ -21,7 +24,7 @@ import Avatar from "../components/Layout/Avatar.astro";
           <span role="img" aria-label="Waving hand">👋</span> Hey, I'm Kyle
         </h1>
       </UIStack>
-
+      <!-- @ts-ignore -->
       <UIStack client:visible direction="column" gap={4}>
         <p>
           I'm a designer turned developer. I work
@@ -78,7 +81,7 @@ import Avatar from "../components/Layout/Avatar.astro";
       <h2>Travels</h2>
 
       <ul>
-        {travels.map((location) => <ListItem {...location} />)}
+        {travels.map((location: ListItemProps) => <ListItem {...location} />)}
       </ul>
     </section>
 

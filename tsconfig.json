@@ -2,6 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "target": "ES5",
+    "verbatimModuleSyntax": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "plugins": [
