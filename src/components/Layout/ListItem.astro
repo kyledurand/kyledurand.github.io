@@ -1,26 +1,45 @@
 ---
+import {Image} from "astro:assets";
+
 export interface ListItemProps {
   year: string;
   location: string;
+  image: ImageMetadata;
   description: string;
 }
-const {year, location, description} = Astro.props as ListItemProps;
+const {year, image, location, description} = Astro.props as ListItemProps;
 ---
 
 <li>
+  {image && <Image src={image} alt={location} width="100" height="100" />}
+
   <h3>{location} • {year}</h3>
   <p>{description}</p>
 </li>
 
 <style>
-  ul {
-    list-style-type: none;
-    padding: 0;
+  img {
+    grid-area: image;
+    object-fit: cover;
+    border-radius: var(--radius-4);
+  }
+
+  h3 {
+    grid-area: location;
+    margin: 0;
+    align-self: center;
+  }
+
+  p {
+    grid-area: description;
     margin: 0;
   }
 
   li {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto 3fr;
+    grid-template-areas: "image location" "image description";
+    row-gap: var(--space-4);
+    column-gap: var(--space-6);
   }
 </style>

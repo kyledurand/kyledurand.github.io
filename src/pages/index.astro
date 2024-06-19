@@ -2,9 +2,7 @@
 import kyle from "../images/kyle.jpeg";
 import Page from "../components/Layout/Page.astro";
 import {UIStack} from "../components/UI/Stack";
-import ListItem, {
-  type ListItemProps,
-} from "../components/Layout/ListItem.astro";
+import ListItem from "../components/Layout/ListItem.astro";
 import {travels} from "../data/travels";
 import Avatar from "../components/Layout/Avatar.astro";
 ---
@@ -78,7 +76,7 @@ import Avatar from "../components/Layout/Avatar.astro";
     <section id="travels">
       <h2>Travels</h2>
 
-      <ul>
+      <ul class="travels">
         {travels.map((location) => <ListItem {...location} />)}
       </ul>
     </section>
@@ -125,6 +123,15 @@ import Avatar from "../components/Layout/Avatar.astro";
       padding-inline: var(--space-4);
       scrollbar-width: none;
       scroll-behavior: smooth;
+    }
+
+    ul.travels {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
     }
   </style>
 </Page>
