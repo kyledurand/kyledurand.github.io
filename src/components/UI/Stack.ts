@@ -10,8 +10,16 @@ type Justify =
   | "space-around"
   | "space-evenly";
 type Direction = "row" | "column";
-
 type SpaceToken = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+
+interface StackProps {
+  direction?: Direction;
+  gap?: SpaceToken;
+  align?: Align;
+  justify?: Justify;
+  paddingBlock?: SpaceToken;
+  paddingInline?: SpaceToken;
+}
 
 @customElement("ui-stack")
 export class UIStack extends LitElement {
@@ -21,6 +29,11 @@ export class UIStack extends LitElement {
   @property() justify?: Justify;
   @property() paddingBlock?: SpaceToken;
   @property() paddingInline?: SpaceToken;
+
+  constructor(props: StackProps) {
+    super();
+    Object.assign(this, props);
+  }
 
   static override styles = css`
     :host {
