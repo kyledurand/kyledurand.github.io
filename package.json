@@ -20,6 +20,7 @@
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/postcss-pxtorem": "^6.0.3",
+    "astro-compress": "2.2.28",
     "cssnano": "^7.0.2",
     "postcss": "^8.4.38",
     "postcss-pxtorem": "^6.1.0"
