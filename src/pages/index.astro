@@ -10,7 +10,7 @@ import Avatar from "../components/Layout/Avatar.astro";
 <Page title="Design, develop, derand.">
   <div class="slides">
     <section id="intro">
-      <UIStack client:load align="center" gap={2} paddingBlock={7}>
+      <UIStack client:only="lit" align="center" gap={2} paddingBlock={7}>
         <Avatar
           src={kyle}
           alt="A picture of Kyle in Essaouira with what appears to be a funny hat but is actually a part of the set of Game of Thrones."
@@ -21,7 +21,7 @@ import Avatar from "../components/Layout/Avatar.astro";
         </h1>
       </UIStack>
 
-      <UIStack client:load direction="column" gap={4}>
+      <UIStack client:only="lit" direction="column" gap={4}>
         <p>
           I'm a designer turned developer. I work
           <a href="https://x.com/Shopify">@shopify</a>
