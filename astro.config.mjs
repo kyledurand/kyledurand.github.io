@@ -5,6 +5,6 @@ import lit from "@astrojs/lit";
 // https://astro.build/config
 export default defineConfig({
   vite: {plugins: [yaml()]},
-  integrations: [lit(), (await import("astro-compress")).default()],
+  integrations: [lit()],
   site: "https://kyledurand.github.io",
 });
