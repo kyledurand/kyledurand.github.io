@@ -1,5 +1,5 @@
-import { LitElement, css, html } from "lit";
-import { customElement, state } from "lit/decorators.js";
+import {LitElement, css, html} from "lit";
+import {customElement, state} from "lit/decorators.js";
 
 @customElement("ui-parachute")
 export class UIParachute extends LitElement {
