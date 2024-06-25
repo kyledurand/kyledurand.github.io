@@ -45,6 +45,8 @@ import Avatar from "../components/Layout/Avatar.astro";
     <section id="work">
       <h2>Work</h2>
 
+      <h3>Freelance / contract – 2009 - 2014</h3>
+
       <h3>Shopify</h3>
       <ul>
         <li>Theme support – 2014</li>
@@ -76,7 +78,7 @@ import Avatar from "../components/Layout/Avatar.astro";
     <section id="travels">
       <h2>Travels</h2>
 
-      <ul class="travels">
+      <ul>
         {travels.map((location) => <ListItem {...location} />)}
       </ul>
     </section>
@@ -125,7 +127,7 @@ import Avatar from "../components/Layout/Avatar.astro";
       scroll-behavior: smooth;
     }
 
-    ul.travels {
+    ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
