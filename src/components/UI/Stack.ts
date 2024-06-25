@@ -22,7 +22,7 @@ interface StackProps {
 }
 
 @customElement("ui-stack")
-export class UIStack extends LitElement {
+export class UIStack extends LitElement implements StackProps {
   @property() direction?: Direction;
   @property() gap?: SpaceToken;
   @property() align?: Align;
