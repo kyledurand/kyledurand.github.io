@@ -22,10 +22,10 @@ const {title} = Astro.props;
   </head>
 
   <body>
-    <div class="side-bar">
+    <header>
       <Nav />
       <UIParachute client:load />
-    </div>
+    </header>
 
     <main>
       <slot />
@@ -41,10 +41,6 @@ const {title} = Astro.props;
         position: relative;
         height: 100dvh;
         width: 100%;
-      }
-
-      .side-bar {
-        border-inline-end: 0.125px solid var(--highlight);
       }
 
       nav {

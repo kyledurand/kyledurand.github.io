@@ -23,8 +23,8 @@ import Avatar from "../components/Layout/Avatar.astro";
 
       <UIStack client:only="lit" direction="column" gap={4}>
         <p>
-          I'm a designer turned developer. I work at
-          <a href="https://shopify.com">shopify</a>
+          I'm a designer / developer. I work at
+          <a href="https://shopify.com">Shopify</a>
           and I'm currently part of the
           <a href="https://shopify.dev/docs/apps/design">App UI team</a>.
         </p>
@@ -45,7 +45,7 @@ import Avatar from "../components/Layout/Avatar.astro";
     <section id="work">
       <h2>Work</h2>
 
-      <h3>Freelance / contract – 2009 - 2014</h3>
+      <h3>Freelance / contract – 2009 - 2014</h3>
 
       <h3>Shopify</h3>
       <ul>
@@ -85,13 +85,25 @@ import Avatar from "../components/Layout/Avatar.astro";
     <section id="contact">
       <h2>Contact</h2>
 
-      <a
-        href="https://www.linkedin.com/in/kyledurand/"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
-        Let's link in
-      </a>
+      <UIStack client:only="lit" direction="column" gap={2}>
+        <a
+          href="https://www.linkedin.com/in/kyledurand/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          🔗 Let's link in
+        </a>
+
+        <a
+          href="https://www.github.com/kyledurand/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          🐙 GitHub
+        </a>
+
+        <span>👆 👆 👇 👇 👈 👉 👈 👉 🅱️ 🅰️</span>
+      </UIStack>
     </section>
   </div>
 
@@ -135,4 +147,15 @@ import Avatar from "../components/Layout/Avatar.astro";
       gap: var(--space-3);
     }
   </style>
+  <script>
+    console.log(
+      `%c
+,___,
+(O,O)
+(   )
+-"-"- 
+    `,
+      "color: #1a1a1a; font-size: 11px; font-weight: bold;"
+    );
+  </script>
 </Page>
